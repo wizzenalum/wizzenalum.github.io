@@ -1,8 +1,7 @@
-# freecodecamp_test_pages
+
 <!DOCTYPE html>
 <html lang = "en">
 <head>
-  <title>wizzenalum projects</title>
 </head>
 <body>
   <h1>Hey Hey ! </h1>
