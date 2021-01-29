@@ -6,11 +6,13 @@
 <body>
   <h1>Hey Hey ! </h1>
   <hr>
-  <h2>This is ghanshyam. here i put all the assignment that i do in other coureses.</h2>
-  <h3>it is jaust a start lets see where can we go</h3>
+  <h2>This is ghanshyam and warm welcome to this readme file.</h2>
+  <p>this project include the all the practice questions that any one can do to learn a specific languge like python, java etc, or any courese like data structure of algorithm. i am trying to do this as part time if wanna contribute to this then please do.</p>
+  
+  <p>
   <nav>
-    <a href="index.html" target="_blank">INDEX </a><br>
-    <a href="structure.html" target="_blank">TRIBUTE PAGE </a>
+    <a href="www.wizzenalum1.github.io" target="_blank">link to website </a><br>
+ 
     
   </nav>
 
