@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Practice patterns in java</title>
+  <!-- <link rel="stylesheet" href="paractice.css"> -->
+  <style> 
+          html{
+        background-color: white;
+      }
+      main{
+
+        background-color: rgba(209, 209, 209, 0.3);
+        margin: 25px 10px 25px 40px;
+        border-radius: 10px;
+        padding: 10px 30px;
+      }
+      #problem{
+
+        max-width:700px;
+        margin:auto;
+      }
+
+      h1{font-size: 50px;
+      color:blue;
+      text-align:center;
+      padding:30px 10px;
+      font-weight:800;
+      font-family: cursive,sans-serif; 
+      }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html" target="_blank">INDEX </a>&emsp;
+    <a href="javapractice/mathpractice.html" target="_blank">NEXT </a>
+  </nav>
+    <main>
+    <h1> Practice your loop and if else statements with patterns</h1>
+    <div id = "problem">
+      <h2> Half Diamond Pattern</h2>
+      <p id="question-text"> Write a program to write half Diamond pattern as shown bellow for any number N. here we assume <em id="math">N = 5</em></p>
+      <p id ="pattern">
+        *<br>
+        *1*<br>
+        *121*<br>
+        *12321*<br>
+        *1234321*<br>
+        *123454321*<br>
+        *1234321*<br>
+        *12321*<br>
+        *121*<br>
+        *1*<br>
+        *<br>
+      </p>
+      <code>
+        import java.util.Scanner;<br>
+        public class Solution {<br>
+          public static void main(String[] args) {<br>
+           Scanner scan = new Scanner(System.in);<br>
+            int n = scan.nextInt();<br>
+            int middle_of_row = 1;<br>
+            System.out.println("*");<br>
+            for(int j=1;j<=n*2-1;j++){<br>
+              System.out.print("*");<br>
+              int print_number = 1;<br>
+              for(int i=1;i<=middle_of_row*2-1;i++){<br>
+                if(i<=middle_of_row){<br>
+                  System.out.print(print_number);<br>
+                  print_number++;<br>
+                }else{<br>
+                  print_number--;<br>
+                  System.out.print(print_number-1);<br>
+                }<br>
+              }<br>
+              System.out.print("*");<br>
+              if(j&ltn){<br>
+                middle_of_row++;<br>
+              }else{<br>
+                middle_of_row--;<br>
+              }<br>
+              System.out.println(&quot;&quot;);<br> 
+            }<br>
+            System.out.println(&quot;*&quot;);<br>
+            }<br>
+        }<br>
+
+      </code>
+    </div>
+    <div id="problem">
+      <h2>Parallelogram Pattern</h2>
+      <p id="question-text"> Write a program to print parallelogram pattern for the given N number of rows. here we assume <em id="math">N = 4</em></p>
+      <p id ="pattern">
+        ****<br>
+        &ensp;****<br>
+        &ensp;&ensp;****<br>
+        &ensp;&ensp;&ensp;****<br>
+        &ensp;&ensp;&ensp;&ensp;****<br>
+      </p>
+      <code>
+        import java.util.Scanner;<br>
+        public class Main {<br>
+          public static void main(String[] args) {<br>
+            Scanner scan = new Scanner(System.in);<br>
+            int n = scan.nextInt();<br>
+            for(int i=0;i&lt;n;i++){<br>
+              for(int j=0;j&lt;i+n;j++){<br>
+                if (j&gt;=i){<br>
+                  System.out.print("*");<br>
+                }else{<br>
+                  System.out.print(" ");<br>
+                }<br>
+              }<br>
+              System.out.println();<br>
+            }<br>
+          }<br>
+        }<br>
+
+      </code>
+    </div>
+    <div id="problem">
+      <h2>Sum Pattern</h2>
+      <p id="question-text"> Write a program to print triangle of user defined integers sum. here we assume <em id="math">N = 4</em></p>
+      <p id ="pattern">
+        1=1<br>
+        1+2=3<br>
+        1+2+3=6<br>
+        1+2+3+4=10<br>
+      </p>
+      <code>
+        import java.util.Scanner;<br>
+        public class Main {<br>
+          public static void main(String[] args) {<br>
+            Scanner scan = new Scanner(System.in);<br>
+            int n = scan.nextInt();<br>
+            for(int i=1;i<=n;i++){<br>
+              int sum = 0;<br>
+              for(int j=1;j<=i;j++){<br>
+                if(j==i){<br>
+                  System.out.print(j+"=");<br>
+                }else{<br>
+                  System.out.print(j+"+");<br>
+                }<br>
+                sum +=j;<br>
+              }<br>
+              System.out.println(sum);<br>
+            }<br>
+          }<br>
+        }<br>
+
+      </code>
+    </div>
+    <div id="problem">
+      <h2>Odd Square</h2>
+      <p id="question-text"> Write a program to print the pattern for given integer N. here we assume <em id="math">N = 5</em></p>
+      <p id ="pattern">
+        13579<br>
+        35791<br>
+        57913<br>
+        79135<br>
+        91357<br>
+      </p>
+      <code>
+        import java.util.Scanner;<br>
+        public class Main {<br>
+          public static void main(String[] args) {<br>
+            Scanner scan = new Scanner(System.in);<br>
+            int n = scan.nextInt();<br>
+            for(int i=0;i<2*n;i+=2){<br>
+              for(int j=1;j<2*n;j+=2){<br>
+                if(i+j<2*n){<br>
+                  System.out.print(i+j);<br>
+                }else{<br>
+                  System.out.print(i+j-2*n);<br>
+                }<br>
+              }<br>
+              System.out.println();<br>
+            }<br>
+          }<br>
+        }<br>
+
+      </code>
+    </div>
+  </main>
+</body>
+</html>
