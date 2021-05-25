@@ -11,7 +11,7 @@
   
   <p>
   <nav>
-    <a href="www.wizzenalum1.github.io" target="_blank">link to website </a><br>
+    <a href="https://wizzenalum1.github.io/" target="_blank">link to website </a><br>
  
     
   </nav>
