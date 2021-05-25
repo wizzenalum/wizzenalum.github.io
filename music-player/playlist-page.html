@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/home.css">
+    <link rel="stylesheet" href="styles/playlist.css">
+    <meta http-equiv="refresh" content="5">
+    <title>Home</title>
+</head>
+<body class="white">
+
+    <!-- -------------header----- -->
+    <header id = "header" class="d-flex-row v-center">
+        <div  class="logo-container d-flex-row v-center">
+            <div id="logo"> <img class = "round" src="images/logo.png" alt=""> </div>
+            <div id = player-name class="text-head"> <p class="bold"> Wizz </p> <p class="thin"> Player </p></div>
+        </div>
+        <div class="favorite-container">
+            <div class="text-head"> Favorite</div>
+        </div>
+        <div class="search-container d-flex-row v-center ">
+            <div id="search-icon"><img src = "images/search-icon.png"></div>
+            <input type="search" name="search" id="search">
+            <div id = "mic"><img src = "images/mic-icon.png"></div>
+        </div>
+        <div class="bell-container">
+            <div id = "bell" class = "" ><img src = "images/bell-icon.png"></div>
+            <div id = "count" class="">3</div>
+        </div>
+        <div class="acount-container d-flex-column">
+            <div id = "profile-pic" ><img class="round" src = "images/artist-1.jpg"></div>
+            <divi id = "acount-name">ghanshyam</div>
+            <div id = "acount-pop-up"></div>
+        </div>
+    </header>
+
+   <!--  --------######--------- main content--------------##########  -->
+   <main class="d-flex-row">
+       <div id="main-content" class="d-flex-row">
+           <section id="container-1-playlist" class="d-flex-row">
+                <div id = "playlist-cover-image"></div>
+                <div id = "playlist-cover-detail">
+                    <div class="d-flex-row"><span class="text-head bold">ColdPlay</span><span>851 Followers</span></div>
+                    <p>British Band</p>
+                    <p class="text">Coldplay is a British music band that has enjoyed continuous success since their
+                        inception in 1996 through their intelligent and soulful songs. The band members are
+                        Chris Martin(lead vocals), jonny Buckland(lead guitar), Guy Berryman(bass guitar)
+                        and will champion(drums).
+                    </p>
+                    <div id = "play-follow" class="d-flex-row"><span id="play-button"> Play All</span><span>Follow</span></div>
+                    <div class="text thin">247 Tracks | 128 Albums</div>
+                </div>
+            </section>
+            <section id="container-2-playlist">
+                <div id="queue-song-container" class="">
+                    <div class = "home-queue-card d-flex-row">
+                        <div id="queue-count"><p>01</p></div>
+                        <div id="image-container" class = "image-container"> <img src="images/song-30.jpg" alt=""></div>
+                        <div class="name-writer">
+                            <p>Mirage</p>
+                            <p>alice </p>
+                        </div>
+                        <div class="time-status-player">4:44</div>
+                        <div id = "add-to-fab"></div>
+                        <div id = "add-to-playlist">
+                            <div id = "vertical-bar"></div>
+                            <div id = "horizontal-bar"></div>
+                        </div>
+                    </div>
+                    <div class = "home-queue-card d-flex-row">
+                        <div id="queue-count"><p>02</p></div>
+                        <div id="image-container" class = "image-container"> <img src="images/song-29.jpg" alt=""></div>
+                        <div class="name-writer">
+                            <p>Mirage</p>
+                            <p>alice </p>
+                        </div>
+                        
+                       <div class="time-status-player">4:44</div>
+                        <div id = "add-to-fab"></div>
+                        <div id = "add-to-playlist">
+                            <div id = "vertical-bar"></div>
+                            <div id = "horizontal-bar"></div>
+                        </div>
+                    </div>
+                    <div class = "home-queue-card d-flex-row">
+                        <div id="queue-count"><p>03</p></div>
+                        <div id="image-container" class = "image-container"> <img src="images/song-28.jpg" alt=""></div>
+                        <div class="name-writer">
+                            <p>Mirage</p>
+                            <p>alice </p>
+                        </div>
+                        
+                       <div class="time-status-player">4:44</div>
+                        <div id = "add-to-fab"></div>
+                        <div id = "add-to-playlist">
+                            <div id = "vertical-bar"></div>
+                            <div id = "horizontal-bar"></div>
+                        </div>
+                    </div>
+                    <div class = "home-queue-card d-flex-row">
+                        <div id="queue-count"><p>04</p></div>
+                        <div id="image-container" class = "image-container"> <img src="images/song-27.jpg" alt=""></div>
+                        <div class="name-writer">
+                            <p>Mirage</p>
+                            <p>alice </p>
+                        </div>
+                        
+                       <div class="time-status-player">4:44</div>
+                        <div id = "add-to-fab"></div>
+                        <div id = "add-to-playlist">
+                            <div id = "vertical-bar"></div>
+                            <div id = "horizontal-bar"></div>
+                        </div>
+                    </div>
+                    <div class = "home-queue-card d-flex-row">
+                        <div id="queue-count"><p>05</p></div>
+                        <div id="image-container" class = "image-container"> <img src="images/song-26.jpg" alt=""></div>
+                        <div class="name-writer">
+                            <p>Mirage</p>
+                            <p>alice </p>
+                        </div>
+                        
+                       <div class="time-status-player">4:44</div>
+                        <div id = "add-to-fab"></div>
+                        <div id = "add-to-playlist">
+                            <div id = "vertical-bar"></div>
+                            <div id = "horizontal-bar"></div>
+                        </div>
+                    </div>
+                    <div class = "home-queue-card d-flex-row">
+                        <div id="queue-count"><p>06</p></div>
+                        <div id="image-container" class = "image-container"> <img src="images/song-25.jpg" alt=""></div>
+                        <div class="name-writer">
+                            <p>Mirage</p>
+                            <p>alice </p>
+                        </div>
+                        
+                       <div class="time-status-player">4:44</div>
+                        <div id = "add-to-fab"></div>
+                        <div id = "add-to-playlist">
+                            <div id = "vertical-bar"></div>
+                            <div id = "horizontal-bar"></div>
+                        </div>
+                    </div>
+                    <div class = "home-queue-card d-flex-row">
+                        <div id="queue-count"><p>07</p></div>
+                        <div id="image-container" class = "image-container"> <img src="images/song-24.jpg" alt=""></div>
+                        <div class="name-writer">
+                            <p>Mirage</p>
+                            <p>alice </p>
+                        </div>
+                        
+                       <div class="time-status-player">4:44</div>
+                        <div id = "add-to-fab"></div>
+                        <div id = "add-to-playlist">
+                            <div id = "vertical-bar"></div>
+                            <div id = "horizontal-bar"></div>
+                        </div>
+                    </div>
+                    <div class = "home-queue-card d-flex-row">
+                        <div id="queue-count"><p>08</p></div>
+                        <div id="image-container" class = "image-container"> <img src="images/song-23.jpg" alt=""></div>
+                        <div class="name-writer">
+                            <p>Mirage</p>
+                            <p>alice </p>
+                        </div>
+                        
+                       <div class="time-status-player">4:44</div>
+                        <div id = "add-to-fab"></div>
+                        <div id = "add-to-playlist">
+                            <div id = "vertical-bar"></div>
+                            <div id = "horizontal-bar"></div>
+                        </div>
+                    </div>
+                    <div class = "home-queue-card d-flex-row">
+                        <div id="queue-count"><p>09</p></div>
+                        <div id="image-container" class = "image-container"> <img src="images/song-22.jpg" alt=""></div>
+                        <div class="name-writer">
+                            <p>Mirage</p>
+                            <p>alice </p>
+                        </div>
+                        
+                       <div class="time-status-player">4:44</div>
+                        <div id = "add-to-fab"></div>
+                        <div id = "add-to-playlist">
+                            <div id = "vertical-bar"></div>
+                            <div id = "horizontal-bar"></div>
+                        </div>
+                    </div>
+                    <div class = "home-queue-card d-flex-row">
+                        <div id="queue-count"><p>10</p></div>
+                        <div id="image-container" class = "image-container"> <img src="images/song-21.jpg" alt=""></div>
+                        <div class="name-writer">
+                            <p>Mirage</p>
+                            <p>alice </p>
+                        </div>
+                        
+                       <div class="time-status-player">4:44</div>
+                        <div id = "add-to-fab"></div>
+                        <div id = "add-to-playlist">
+                            <div id = "vertical-bar"></div>
+                            <div id = "horizontal-bar"></div>
+                        </div>
+                    </div>
+                    <div class = "home-queue-card d-flex-row">
+                        <div id="queue-count"><p>11</p></div>
+                        <div id="image-container" class = "image-container"> <img src="images/song-20.jpg" alt=""></div>
+                        <div class="name-writer">
+                            <p>Mirage</p>
+                            <p>alice </p>
+                        </div>
+                        
+                       <div class="time-status-player">4:44</div>
+                        <div id = "add-to-fab"></div>
+                        <div id = "add-to-playlist">
+                            <div id = "vertical-bar"></div>
+                            <div id = "horizontal-bar"></div>
+                        </div>
+                    </div>
+                    <div class = "home-queue-card d-flex-row">
+                        <div id="queue-count"><p>12</p></div>
+                        <div id="image-container" class = "image-container"> <img src="images/song-19.jpg" alt=""></div>
+                        <div class="name-writer">
+                            <p>Mirage</p>
+                            <p>alice </p>
+                        </div>
+                        
+                       <div class="time-status-player">4:44</div>
+                        <div id = "add-to-fab"></div>
+                        <div id = "add-to-playlist">
+                            <div id = "vertical-bar"></div>
+                            <div id = "horizontal-bar"></div>
+                        </div>
+                    </div>
+                    <div class = "home-queue-card d-flex-row">
+                        <div id="queue-count"><p>13</p></div>
+                        <div id="image-container" class = "image-container"> <img src="images/song-18.jpg" alt=""></div>
+                        <div class="name-writer">
+                            <p>Mirage</p>
+                            <p>alice </p>
+                        </div>
+                        
+                       <div class="time-status-player">4:44</div>
+                        <div id = "add-to-fab"></div>
+                        <div id = "add-to-playlist">
+                            <div id = "vertical-bar"></div>
+                            <div id = "horizontal-bar"></div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </section>
+        </div>
+        <div id="home-queue" class="white-color">
+            <section id="playlist-aside-container-1">
+                <h2 class="text-head bold">Similar artists</h2>
+                <div id="queue-popup-container">
+                    <h3>view all</h3>
+                    <a id ="dropdown-icon" href="#dummy" >^</a>
+                    <div class="popup-field popup-queue">
+                        <div><img src="images/heart-gray.png" alt="icon"><a href="#player"><span>Faborite</a></span></div>
+                        <div><img src="images/fab.png" alt="icon"><a href=""><span>playlist</a></span></div>
+                        <div><img src="images/info.png" alt="icon"><a href=""><span>More info</a></span></div>
+                    </div> 
+                </div>
+                <div id = "latest-release-container" class=" d-flex-column">
+                    <div class= "d-flex-row">
+                        <a href="#header" class = "image-container"><img src="images/song-1.jpg" alt="song-name"></a>
+                        <div class = "name-date">
+                            <p>Onism</p>
+                            <p>AUG 11,2017</p>
+                        </div>
+                        <div id = "latest-menu" class = "d-flex-column">
+                            <a href="#popup-song-1"> <div class="dot-container"><div class = "dots"></div><div class = "dots"></div><div class = "dots"></div></div></a>
+                            <div id="popup-song-1" class="popup-field popup-latest">
+                                <div><img src="images/play-button-gray.png" alt="icon"><a href="#player"><span> Play</a></span></div>
+                                <div><img src="images/add.png" alt="icon"><a href=""><span>Add to queue</a></span></div>
+                                <div><img src="images/fab.png" alt="icon"><a href=""><span>Add to playlist</a></span></div>
+                                <div><img src="images/info.png" alt="icon"><a href=""><span>More info</a></span></div>
+                                <a href="#just-close"> <div id="popup-song-close"></div></a>
+                            </div>
+                            <div class="text"> 4:44</div>
+                        </div>
+                    </div>
+                    <div class= "d-flex-row">
+                        <a href="header" class = "image-container"><img src="images/song-2.jpg" alt="song-name"></a>
+                        <div class = "name-date">
+                            <p>Onism</p>
+                            <p>AUG 11,2017</p>
+                        </div>
+                        <div id = "latest-menu" class = "d-flex-column">
+                            <a href="#popup-song-2"> <div class="dot-container"><div class = "dots"></div><div class = "dots"></div><div class = "dots"></div></div></a>
+                            <div id="popup-song-2" class="popup-field popup-latest">
+                                <div><img src="images/play-button-gray.png" alt="icon"><a href="#player"><span> Play</a></span></div>
+                                <div><img src="images/add.png" alt="icon"><a href=""><span>Add to queue</a></span></div>
+                                <div><img src="images/fab.png" alt="icon"><a href=""><span>Add to playlist</a></span></div>
+                                <div><img src="images/info.png" alt="icon"><a href=""><span>More info</a></span></div>
+                                <a href="#just-close"> <div id="popup-song-close"></div></a>
+                            </div>
+                            <div class="text"> 4:44</div>
+                        </div>
+                    </div>
+                    <div class= "d-flex-row">
+                        <a href="header" class = "image-container"><img src="images/song-3.jpg" alt="song-name"></a>
+                        <div class = "name-date">
+                            <p>Onism</p>
+                            <p>AUG 11,2017</p>
+                        </div>
+                        <div id = "latest-menu" class = "d-flex-column">
+                            <a href="#popup-song-3"> <div class="dot-container"><div class = "dots"></div><div class = "dots"></div><div class = "dots"></div></div></a>
+                            <div id="popup-song-3" class="popup-field popup-latest">
+                                <div><img src="images/play-button-gray.png" alt="icon"><a href="#player"><span> Play</a></span></div>
+                                <div><img src="images/add.png" alt="icon"><a href=""><span>Add to queue</a></span></div>
+                                <div><img src="images/fab.png" alt="icon"><a href=""><span>Add to playlist</a></span></div>
+                                <div><img src="images/info.png" alt="icon"><a href=""><span>More info</a></span></div>
+                                <a href="#just-close"> <div id="popup-song-close"></div></a>
+                            </div>
+                            <div class="text"> 4:44</div>
+                        </div>
+                    </div>
+                    <div class= "d-flex-row">
+                        <a href="header" class = "image-container"><img src="images/song-4.jpg" alt="song-name"></a>
+                        <div class = "name-date">
+                            <p>Onism</p>
+                            <p>AUG 11,2017</p>
+                        </div>
+                        <div id = "latest-menu" class = "d-flex-column">
+                            <a href="#popup-song-4"> <div class="dot-container"><div class = "dots"></div><div class = "dots"></div><div class = "dots"></div></div></a>
+                            <div id="popup-song-4" class="popup-field popup-latest">
+                                <div><img src="images/play-button-gray.png" alt="icon"><a href="#player"><span> Play</a></span></div>
+                                <div><img src="images/add.png" alt="icon"><a href=""><span>Add to queue</a></span></div>
+                                <div><img src="images/fab.png" alt="icon"><a href=""><span>Add to playlist</a></span></div>
+                                <div><img src="images/info.png" alt="icon"><a href=""><span>More info</a></span></div>
+                                <a href="#just-close"> <div id="popup-song-close"></div></a>
+                            </div>
+                            <div class="text"> 4:44</div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </section>
+            <section>
+                <h2 class="text-head bold">Recently Played</h2>
+                <div id="queue-popup-container">
+                    <h3>view all</h3>
+                    <a id ="dropdown-icon" href="#dummy" >^</a>
+                    <div class="popup-field popup-queue">
+                        <div><img src="images/heart-gray.png" alt="icon"><a href="#player"><span>Faborite</a></span></div>
+                        <div><img src="images/fab.png" alt="icon"><a href=""><span>playlist</a></span></div>
+                        <div><img src="images/info.png" alt="icon"><a href=""><span>More info</a></span></div>
+                    </div> 
+                </div>
+                <div id="queue-song-container" class="">
+                    <div class = "home-queue-card d-flex-row">
+                        <div id="queue-count"><p>01</p></div>
+                        <div id="image-container" class = "image-container"> <img src="images/song-30.jpg" alt=""></div>
+                        <div class="name-writer">
+                            <p>Mirage</p>
+                            <p>alice </p>
+                        </div>
+                        
+                        <div id = "add-to-fab"></div>
+                    </div>
+                    <div class = "home-queue-card d-flex-row">
+                        <div id="queue-count"><p>02</p></div>
+                        <div id="image-container" class = "image-container"> <img src="images/song-29.jpg" alt=""></div>
+                        <div class="name-writer">
+                            <p>Mirage</p>
+                            <p>alice </p>
+                        </div>
+                        
+                        <div id = "add-to-fab"></div>
+                    </div>
+                    <div class = "home-queue-card d-flex-row">
+                        <div id="queue-count"><p>03</p></div>
+                        <div id="image-container" class = "image-container"> <img src="images/song-28.jpg" alt=""></div>
+                        <div class="name-writer">
+                            <p>Mirage</p>
+                            <p>alice </p>
+                        </div>
+                        
+                        <div id = "add-to-fab"></div>
+                    </div>
+                    <div class = "home-queue-card d-flex-row">
+                        <div id="queue-count"><p>04</p></div>
+                        <div id="image-container" class = "image-container"> <img src="images/song-27.jpg" alt=""></div>
+                        <div class="name-writer">
+                            <p>Mirage</p>
+                            <p>alice </p>
+                        </div>
+                        
+                        <div id = "add-to-fab"></div>
+                    </div>
+                    <div class = "home-queue-card d-flex-row">
+                        <div id="queue-count"><p>05</p></div>
+                        <div id="image-container" class = "image-container"> <img src="images/song-26.jpg" alt=""></div>
+                        <div class="name-writer">
+                            <p>Mirage</p>
+                            <p>alice </p>
+                        </div>
+                        
+                        <div id = "add-to-fab"></div>
+                    </div>
+                    <div class = "home-queue-card d-flex-row">
+                        <div id="queue-count"><p>06</p></div>
+                        <div id="image-container" class = "image-container"> <img src="images/song-25.jpg" alt=""></div>
+                        <div class="name-writer">
+                            <p>Mirage</p>
+                            <p>alice </p>
+                        </div>
+                        
+                        <div id = "add-to-fab"></div>
+                    </div>
+                    <div class = "home-queue-card d-flex-row">
+                        <div id="queue-count"><p>07</p></div>
+                        <div id="image-container" class = "image-container"> <img src="images/song-24.jpg" alt=""></div>
+                        <div class="name-writer">
+                            <p>Mirage</p>
+                            <p>alice </p>
+                        </div>
+                        
+                        <div id = "add-to-fab"></div>
+                    </div>
+                <div class = "home-queue-card d-flex-row">
+                    <div id="queue-count"><p>08</p></div>
+                    <div id="image-container" class = "image-container"> <img src="images/song-23.jpg" alt=""></div>
+                    <div class="name-writer">
+                        <p>Mirage</p>
+                        <p>alice </p>
+                    </div>
+                    
+                    <div id = "add-to-fab"></div>
+                </div>
+                <div class = "home-queue-card d-flex-row">
+                    <div id="queue-count"><p>09</p></div>
+                    <div id="image-container" class = "image-container"> <img src="images/song-22.jpg" alt=""></div>
+                    <div class="name-writer">
+                        <p>Mirage</p>
+                        <p>alice </p>
+                    </div>
+                    
+                    <div id = "add-to-fab"></div>
+                </div>
+                <div class = "home-queue-card d-flex-row">
+                    <div id="queue-count"><p>10</p></div>
+                    <div id="image-container" class = "image-container"> <img src="images/song-21.jpg" alt=""></div>
+                    <div class="name-writer">
+                        <p>Mirage</p>
+                        <p>alice </p>
+                    </div>
+                    
+                    <div id = "add-to-fab"></div>
+                </div>
+               
+                
+            </div>
+            </section>
+        </div>
+    </main>
+    <footer id="player" class="d-flex-row">
+        <div id="song-detail-player" class = "d-flex-row">
+            <div id="player-image" class="image-container"><img src="images/song-16.jpg" alt="song-cover"></div>
+            <div id = "player-text">
+                <p>Imagine by john Lenon</p>
+                <p>john Lenon</p> 
+            </div>
+            <svg id="heart-player" class="player-icon-1">
+                <path
+                sodipodi:nodetypes="ccc"
+                d="m 13,20 c -15.66872,-8.9907 -12.06345,-23.873274 -0.36958,-15.841619 12.33715,-8.414549 15.06258,7.154354 0.36958,15.841619 z"/>
+            </svg> 
+            <svg id = "block-player" class ="player-icon-1">
+                <g
+                transform="matrix(2.6298869,0,0,2.6298869,-481.74093,-322.1669)">
+                <circle
+                    r="3.5"
+                    cy="126.96864"
+                    cx="188"/>
+                <path
+                    d="m 185.6,124.7 4.7,4.6">
+            </g></svg> 
+
+        </div>
+        <div id="song-option-player">
+            <div id = "player-control">
+                <svg 
+                    id = "random-player"
+                    class ="player-icon-2">
+                    <g
+                    transform="matrix(2.79,0,0,2.77,648,-645.19337)">
+                    <path
+                    d="m -225.65252,234.95166 -0.0162,-0.44416 -0.001,-0.44446 0.39275,0.20806 0.38546,0.22129 -0.37657,0.23611 z" />
+                    <path
+                    d="m -231.82842,238.33476 c 2.59986,-0.25117 3.51067,-3.41303 5.98624,-3.76697"/>    
+                    <path
+                    d="m -231.77002,234.5678 c 0.87431,0.19583 1.52019,0.54394 1.92728,1.05125"/>    
+                    <path
+                    d="m -227.76945,237.25432 c 0.48589,0.55738 1.06571,1.00516 2.01489,1.02203"/>    
+                    <path
+                    d="m -225.65252,238.66957 -0.0162,-0.44416 -0.001,-0.44446 0.39275,0.20806 0.38546,0.22129 -0.37657,0.23611 z"/>
+                </g></svg>
+                <svg 
+                    id = "backward-player"
+                    class ="player-icon-2">
+                    <g
+                    transform="translate(-115,-95.5)">
+                    <path
+                    transform="matrix(2.7850849,0,0,2.7850849,540.30588,-552.41851)"
+                    style="stroke-width:1;"
+                    d="m -146.62411,233.67143 v 5.14144" />
+                    <path
+                    style="stroke-width:4.6118288;"
+                    d="m 121.99327,102.3369 5.6178,3.20504 -5.65382,3.21702 z" />
+                </g></svg>
+                <svg 
+                    id = "play-pause-player"
+                    class ="player-icon-2">
+                    <g transform="matrix(2.78,0,0,2.792,511.83773,-634.73678)">
+                <circle
+                    r="8.2593498"
+                    cy="236.29378"
+                    cx="-175.18082"/>
+                <g id="pause-player">
+                    <path d="m -177.08047,233.07263 0.0413,6.2771" />
+                    <path d="m -173.36376,233.11393 0.0413,6.2771" />
+                </g>
+                <path id="play-player"
+                    transform="matrix(0.704,-0.03414476,0.03244898,0.74477138,-59.154133,54.070715)"
+                    d="m -172.9095,236.66543 -2.09776,1.0923 -2.13367,1.02035 0.10292,-2.36286 0.18319,-2.358 1.99483,1.27057 z"/>
+                </g></svg>
+                <svg 
+                    id = "forward-player"
+                    class ="player-icon-2">
+                    <g
+                    transform="translate(-115,-95.5)">
+                    <path
+                    transform="matrix(2.7850849,0,0,2.7850849,540.30588,-552.41851)"
+                    style="stroke-width:1;"
+                    d="m -146.62411,233.67143 v 5.14144" />
+                    <path
+                    style="stroke-width:4.6118288;"
+                    d="m 121.99327,102.3369 5.6178,3.20504 -5.65382,3.21702 z" />
+                </g></svg> 
+                <svg 
+                    id="repeat-player"
+                    class ="player-icon-2">
+                    <g transform="matrix(2.79,0,0,2.774,354.17644,-648.89178)">
+                <g>
+                    <path style="stroke-width:0.5;"
+                        d="m -125.76962,238.30556 c -0.28441,-2.19362 0.98264,-3.03402 4.40938,-2.74492"/>
+                    <path style="stroke-width:1.33195949;"
+                        d="m -119.87097,235.47304 -0.80262,0.43062 -0.77424,0.47978 0.0284,-0.9104 -0.0284,-0.91041 0.77424,0.47978 z"
+                        transform="matrix(0.53506273,0,0,0.52113387,-56.374182,112.77053)" />
+                    <path
+                        transform="matrix(-0.53499296,-0.0086407,0.00841576,-0.52106591,-190.98108,361.43046)"
+                        d="m -119.87097,235.47304 -0.80262,0.43062 -0.77424,0.47978 0.0284,-0.9104 -0.0284,-0.91041 0.77424,0.47978 z"
+                        style="stroke-width:1.33195949;" />
+                </g> <g transform="rotate(-180,-122.55388,237.66148)">
+                    <path  d="m -125.76962,238.30556 c -0.28441,-2.19362 0.98264,-3.03402 4.40938,-2.74492"
+                        style="stroke-width:0.5;" /> </g></g></svg> 
+            </div>
+            <div>
+                <span class="time-status-player">1:39</span>
+                    <span id = "song-status" class="slider">
+                        <div class="slide-button"></div>
+                        <div class="change-color"></div>
+                    </span>
+                <span class="time-status-player">4:44</span>
+            </div>
+        </div>
+        <div id="other-control"  class="d-flex-row">
+            <svg 
+                id="playlist-player"
+                class ="player-icon-1">
+                <g transform="matrix(2.66,0,0,2.756,-77.963412,-662.32875)">
+                <path d="m 34.400192,242.19921 h 3.510225"/>
+                <path d="m 30.497649,244.30534 h 7.557306" />
+                <path d="m 30.477,246.41147 h 7.557306"/>
+                <path d="m 31.965746,242.08597 -0.458085,0.26877 -0.490126,0.27869 -0.0037,-0.5311 0.0037,-0.56381 0.461801,0.26233 z"/>
+            </g></svg> 
+            <svg 
+                id="device-player"
+                class ="player-icon-1">
+                <g transform="matrix(2.7850849,0,0,2.7850849,-133.75748,-667.06814)">
+                <path  d="m 51.583444,246.94514 -1.347232,-0.013" />
+                <path d="m 55.381727,242.21688 -1.052002,-0.013" />
+                <path d="m 54.433358,243.97864 c 0.119111,-0.0755 0.257769,-0.11995 0.3986,-0.12768 0.14083,-0.008 0.283517,0.0212 0.410182,0.0833 0.126665,0.062 0.237024,0.15701 0.317249,0.27302 0.08022,0.116 0.130135,0.25278 0.143477,0.39319 0.01335,0.14052 -0.01,0.28436 -0.06698,0.41347 -0.05703,0.12912 -0.14767,0.24321 -0.260535,0.32798 -0.112865,0.0848 -0.247706,0.14 -0.387601,0.15878 -0.139895,0.0188 -0.28453,0.001 -0.415755,-0.0509 -0.131224,-0.052 -0.248744,-0.13815 -0.337811,-0.24765 -0.08907,-0.1095 -0.149481,-0.2421 -0.17366,-0.38117 -0.02418,-0.13906 -0.01207,-0.28427 0.03481,-0.41741 0.04688,-0.13314 0.128422,-0.2539 0.234396,-0.34714 0.03245,-0.0285 0.06713,-0.0545 0.103632,-0.0777 z" />
+                <path  d="m 53.03431,246.88037 3.653071,-0.0259 -0.0259,-6.19209 h -3.562392 z" />
+                <path   d="m 51.761585,240.75307 h -2.772191 v 4.79303 h 2.798099" />
+            </g></svg>
+            <svg 
+                id="volume-player"
+                class ="player-icon-1">
+                <g transform="matrix(2.75,0,0,2.772,-183.77095,-663.17087)">
+            <path d="m 68.423845,242.56664 1.515636,-0.0259 1.554499,-1.52859 0.0259,5.22053 -1.619268,-1.54155 h -1.502683 z" />
+            <path d="m 73.178021,241.94484 c 0.79763,1.31751 0.590137,2.33348 0.01296,3.23854" />
+            <path d="m 73.955269,240.66238 c 1.819486,2.17536 1.525919,4.1111 0,5.90709" />
+            </g></svg>
+            <div id="volume-status" class="slider">
+                <div class="slide-button"></div>
+                <div class="change-color"></div>
+            </div>
+            <svg 
+                id = "expand-compress-player"
+                class ="player-icon-1">
+                <g
+                transform="translate(-8,-75)">
+                <g class="compress-player">
+                <g transform="matrix(2.7850683,0.00960797,-0.00960797,2.7850683,-348.03831,-583.80936)">
+                    <path d="m 130.64265,240.62352 1.70995,0.0259 v 1.69699" />
+                    <path d="m 130.82401,242.1262 1.51563,-1.45087" />
+                </g> <g transform="matrix(-2.7850493,0.01408777,-0.01408777,-2.7850493,394.48985,751.46009)">        
+                    <path d="m 130.64265,240.62352 1.70995,0.0259 v 1.69699" />
+                    <path d="m 130.82401,242.1262 1.51563,-1.45087" />
+                </g>
+                </g>
+                <g class="expand-player">
+                <g transform="matrix(-2.7849767,-0.02455033,0.02455033,-2.7849767,374.56346,767.10817)">
+                    <path d="m 130.64265,240.62352 1.70995,0.0259 v 1.69699"/>
+                    <path d="m 130.82401,242.1262 1.51563,-1.45087"/>
+                </g>
+                <g transform="matrix(2.7845982,-0.05206896,0.05206896,2.7845982,-351.92864,-586.57764)">
+                    <path d="m 130.64265,240.62352 1.70995,0.0259 v 1.69699"/>
+                    <path d="m 130.82401,242.1262 1.51563,-1.45087"/>
+                </g></g></g></svg>
+        </div>
+    </footer>
+   
+</body>
+</html>
