@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <!-- <meta http-equiv = "refresh" content="5"> -->
+    <link rel="stylesheet" href="style/home1.css">
+</head>
+<body>
+    <div id="calculator">
+        <h1>let's calculate</h1>
+        <p id="screen">write expression</p>
+        <div id="button">
+            <p onclick="operator('(')" class="operator-button">(</p>
+            <p onclick="operator(')')" class="operator-button">)</p>
+            <p onclick="clean('%')" class="operator-button">C</p>
+            <p onclick="operator('+')" class="operator-button">+</p>
+            <p onclick="operand('1')" class="operand-button">1</p>
+            <p onclick="operand('2')" class="operand-button">2</p>
+            <p onclick="operand('3')" class="operand-button">3</p>
+            <p onclick="operator('-')" class="operator-button">-</p>
+            <p onclick="operand('4')" class="operand-button">4</p>
+            <p onclick="operand('5')" class="operand-button">5</p>
+            <p onclick="operand('6')" class="operand-button">6</p>
+            <p onclick="operator('*')" class="operator-button">*</p>
+            <p onclick="operand('7')" class="operand-button">7</p>
+            <p onclick="operand('8')" class="operand-button">8</p>
+            <p onclick="operand('9')" class="operand-button">9</p>
+            <p onclick="operator('/')" class="operator-button">/</p>
+            <p onclick="operand('.')" class="operand-button">.</p>
+            <p onclick="operand('0')" class="operand-button">0</p>
+            <p id="be" onclick=calculate()>DoMath</p>
+        </div>
+    </div>
+<script src="script/home1.js"></script>
+</body>
+</html>
