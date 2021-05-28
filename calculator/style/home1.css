@@ -6,7 +6,7 @@ body,h1,p{
     padding: 0px;
     margin:0px;
 }
-:root{
+/* :root{
     --calculator-background:linear-gradient(rgb(17, 22, 75),rgb(24, 24, 116));
     
     --head-background:rgb(88, 88, 8);
@@ -23,18 +23,61 @@ body,h1,p{
     --button-background:rgba(255, 255, 255, 0.418);
     --button-font-size:1rem;
     --button-font-family:1rem;
-    --button-font-color:white;
+    --button-font-color:white;  
+} */
+/* one color combination  */
+/* :root{
+    --calculator-background:linear-gradient(45deg,rgb(54, 78, 114), rgb(5, 5, 44));
+    
+    --head-background:rgba(95, 95, 16, 0.349);
+    --head-font-size:2rem;
+    --head-font-family:monoscope;
+    --head-font-color:rgba(250, 239, 239, 0.712);
+    
+    --screen-background:radial-gradient(rgb(39, 47, 59), rgb(5, 5, 44));
+    --screen-font-size:2rem;
+    --screen-font-family:;
+    --screen-font-color:rgb(226, 179, 179);
+    
+    --button-border:1px solid rgba(194, 191, 191, 0.822);
+    --button-background:rgba(40, 138, 155, 0.527);
+    --button-font-size:2.5rem;
+    --button-font-family:1rem;
+    --button-font-color:rgba(255, 255, 255, 0.788);
+    
+} */
+:root{
+    --calculator-background:linear-gradient(45deg,rgb(54, 78, 114), rgb(5, 5, 44));
+    
+    /* --head-background:rgba(95, 95, 16, 0.349); */
+    --head-font-size:2rem;
+    --head-font-family:'Times New Roman', Times, serif;
+    --head-font-color:rgba(250, 239, 239, 0.712);
+    
+    --screen-background:radial-gradient(rgba(5, 5, 44, 0.541),rgba(59, 39, 50, 0.336) );;
+    --screen-font-size:2rem;
+    --screen-font-family: 'Courier New', Courier, monospace;
+    --screen-font-color:rgb(226, 179, 179);
+    
+    --button-border:1px solid rgba(194, 191, 191, 0.822);
+    --button-background:rgba(40, 138, 155, 0.527);
+    --button-font-size:2.5rem;
+    --button-font-family:'Courier New', Courier, monospace;
+    --button-font-color:rgba(255, 255, 255, 0.788);
     
 }
+body{
+
+    background: var(--calculator-background);
+}
 #calculator{
-    height: 90vh;
+    height: 95vh;
     width:60vh;
     margin:auto;
-    background: var(--calculator-background);
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
 }
 h1,#button>p{
     display: flex;
@@ -47,25 +90,25 @@ h1{
     font-size: var(--head-font-size);
     font-family: var(--head-font-family);
     color:var(--head-font-color);
-    background-color: var(--head-background);
+    background: var(--head-background);
     text-transform: capitalize;
 }
 #screen{
     height: 15%;
     width: 100%;
     border:1% solid rgb(187, 42, 42);
-    padding:1% 10px;
-    /* overflow:scroll; */
+    padding:2% 5%;
+    overflow-wrap: break-word;
     font-size: var(--screen-font-size);
     font-family: var(--screen-font-family);
     color:var(--screen-font-color);
-    background-color: var(--screen-background);
+    background:var(--screen-background);
 }
 #button{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    align-items: space-evenly;
+    /* align-items: space-evenly; */
     width:90%;
     margin: auto;
     height: 75%;
@@ -79,15 +122,15 @@ h1{
     color:var(--button-font-color);
     border: var(--button-border);
     font-size: 2rem;
-    background-color: var(--button-background);
+    background: var(--button-background);
     
 }
 .operand-button,.operator-button{
-    width:24%;
-    height: 19.5%;
+    width:23%;
+    height: 19%;
 }
 #be{
-    width:50%;
+    width:49%;
 }
 .operator-button:active{
     transform: rotate(10deg) scale(.9);
@@ -97,20 +140,10 @@ h1{
     transform: rotate(-10deg) scale(1.1);
 }
 #be:active{
-    background-color: rgb(14, 14, 71);
+    background: rgb(14, 14, 71);
 }
-@media (max-width:450px) {
-    #calculator{
-        height: 100vh;
-        width:100%;        
-    }
-}
-@media (max-width:390px) {
-    :root{
-        --head-font-size:2rem;
-        --screen-font-size:1.5rem;
-        
-    }
+@media (max-width:420px) {  
+    
     #calculator{
         height: 100vh;
         width:100%;        

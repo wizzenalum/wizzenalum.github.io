@@ -35,7 +35,7 @@
 	
 	/* portfolio */
 	--portfolio-visibility:hidden;
-	--text-color-5: rgb(11, 4, 29);/* hidden widget heading*/
+	--text-color-5: rgb(255, 255, 255);/* hidden widget heading*/
 	--font-size-4:1.5rem;  /* nav taxt*/
 }
 
@@ -277,7 +277,7 @@ font-size:1.2rem;
 	padding:20px;
 }
 .portfolio-widgets p{
-	background-color: rgba(59, 63, 121, 0.508);
+	background-color: rgba(59, 63, 121, 0.671);
 	color: var(--text-color-5);
 	text-align: center;
 	border-radius: 5px;
@@ -302,7 +302,7 @@ font-size:1.2rem;
 	background-image: url(asset/project4.png);
 }
 #widget5{
-	background-image: url(asset/project5.png);
+	background-image: url(asset/project5.png),url(asset/calculator-cover.png);
 }
 #widget6{
 	background-image: url(asset/project6.png);
