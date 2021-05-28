@@ -1,13 +1,30 @@
 body *{
     box-sizing: border-box;
+    transition: all,.1s;
 }
 body,h1,p{
     padding: 0px;
     margin:0px;
 }
 :root{
-    --calculator-background:linear-gradient(red,blue);
-    --button-border:white;
+    --calculator-background:linear-gradient(rgb(17, 22, 75),rgb(24, 24, 116));
+    
+    --head-background:rgb(88, 88, 8);
+    --head-font-size:1rem;
+    --head-font-family:monoscope;
+    --head-font-color:white;
+    
+    --screen-background:rgb(128, 128, 115);
+    --screen-font-size:1rem;
+    --screen-font-family:1rem;
+    --screen-font-color:black;
+    
+    --button-border:1px solid rgba(146, 135, 135, 0.452);
+    --button-background:rgba(255, 255, 255, 0.418);
+    --button-font-size:1rem;
+    --button-font-family:1rem;
+    --button-font-color:white;
+    
 }
 #calculator{
     height: 90vh;
@@ -26,23 +43,29 @@ h1,#button>p{
 }
 h1{
     width:100%;
-    font-size: 1rem;
-    background-color: yellow;
+    height: 5%;
+    font-size: var(--head-font-size);
+    font-family: var(--head-font-family);
+    color:var(--head-font-color);
+    background-color: var(--head-background);
+    text-transform: capitalize;
 }
 #screen{
     height: 15%;
     width: 100%;
-    background-color: rgb(179, 182, 179);
-    border:1% solid white;
+    border:1% solid rgb(187, 42, 42);
     padding:1% 10px;
-    overflow:scroll;
-    /* overflow-y: auto; */
-    font-family:monospace;
+    /* overflow:scroll; */
+    font-size: var(--screen-font-size);
+    font-family: var(--screen-font-family);
+    color:var(--screen-font-color);
+    background-color: var(--screen-background);
 }
 #button{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    align-items: space-evenly;
     width:90%;
     margin: auto;
     height: 75%;
@@ -50,18 +73,21 @@ h1{
 }
 #button>p{
     box-sizing: border-box;
-    border: 1px solid var(--button-border);
     border-radius: 15px;
+    font-size: var(--button-font-size);
+    font-family: var(--button-font-family);
+    color:var(--button-font-color);
+    border: var(--button-border);
+    font-size: 2rem;
+    background-color: var(--button-background);
     
 }
 .operand-button,.operator-button{
-    background-color: blue;
     width:24%;
     height: 19.5%;
 }
 #be{
     width:50%;
-    background-color: blue;
 }
 .operator-button:active{
     transform: rotate(10deg) scale(.9);
@@ -72,4 +98,39 @@ h1{
 }
 #be:active{
     background-color: rgb(14, 14, 71);
+}
+@media (max-width:450px) {
+    #calculator{
+        height: 100vh;
+        width:100%;        
+    }
+}
+@media (max-width:390px) {
+    :root{
+        --head-font-size:2rem;
+        --screen-font-size:1.5rem;
+        
+    }
+    #calculator{
+        height: 100vh;
+        width:100%;        
+    }
+    #screen{
+        padding:5% 2% 0px 2%;
+        height: 20%;
+    }
+    #button{
+        width:100%;
+        height: 125vw;
+        margin: auto;
+        border:none;  
+    }
+    .operand-button,.operator-button{
+        width:23vw;
+        height: 23vw;
+    }
+    #be{
+        width:49vw;
+    }
+    
 }
