@@ -18,6 +18,7 @@ import { cache } from "./data/cache.js"
 let count = 0;
 // variable used to create single page on the view
 let current_id = "";
+let notty_id = "";
 
 // input fielsd
 let inputDistrict = document.getElementById("select-district");
@@ -26,9 +27,23 @@ let inputMin = document.getElementById("min-range");
 let inputMax = document.getElementById("max-range");
 
 
+//**********************NOTIFIACTION ******************** */
+
+let notty = document.querySelector(".notty");
+let notify = function(message){
+    clearTimeout(notty_id);
+    notty.innerHTML = message;
+    notty.classList.add("show-notty")
+    notty_id = setTimeout(() => {
+        notty.classList.remove("show-notty")
+    },3000);
+}
+notify(" LOADING....")
+
 // ******************INITIALIZATION**************
 window.addEventListener('load', (event) => {
-    console.log('page is fully loaded');
+    notify("WELOCME, Now try any input")
+    // console.log('page is fully loaded');
     let roll_no = 1500000;
     let school = 0;
     let percent = 0;
@@ -47,14 +62,14 @@ window.addEventListener('load', (event) => {
             school,
                     ]
     }
-    console.log(db[0]);
+    // console.log(db[0]);
     
   });
 // adding option to the select-district and select-school;
-console.log(db[0],cache["district-code"]);
+// console.log(db[0],cache["district-code"]);
 
 
-let distOption = '<option value="">--------   none   --------</option>';
+let distOption = '<option value="">--------   NONE   --------</option>';
 let keys = Object.keys(cache["district-code"])
 for(let key of keys){
     distOption+=`<option value=${key}>${cache["district-code"][key]}</option>`
@@ -62,14 +77,22 @@ for(let key of keys){
 inputDistrict.innerHTML = distOption
 // value of schools will be selected as district-select will change.
 inputDistrict.addEventListener('change', () => {
-    console.log(inputDistrict.value)
-    let schOption =  `<option value="">--------   none   --------</option>`;
+    // console.log(inputDistrict.value)
+    let schOption =  `<option value="">--------   NONE   --------</option>`;
     keys = Object.keys(cache["school-code"][inputDistrict.value])
+    let schools = []
     for(let key of keys){
-        schOption+=`<option value=${key}>${cache["school-code"][inputDistrict.value][key]}</option>`
+        schools.push(cache["school-code"][inputDistrict.value][key]);
+    }
+    schools.sort();
+    // console.log(schools);
+    for(let i in keys){
+        schOption+=`<option value=${keys[i]}>${schools[i]}</option>`
     }
     inputSchool.innerHTML = schOption
   });
+
+// ********** POST CREATINON FUNCTIONS **************  
 // fuction for creating pages and single post
 
 // this function create single post.
@@ -86,7 +109,7 @@ let createPost = async function(student){
 // this will create page for array of index.
 let createPage = async function(posts){
     // console.log(posts,start);
-    console.log("post creation start");
+    // console.log("post creation start");
     let count = 0;
     if(posts.length>0){
         current_id = setInterval(function(){
@@ -95,10 +118,19 @@ let createPage = async function(posts){
             if(count>posts.length){
                 clearInterval(current_id);
             }
-            console.log(count)
-        },100)
-        console.log("post creation end")
-    } else console.log(" array has 0 items so page wont create.")
+            if(count%40==0){
+                notify(" LOADING....")
+            }
+            if(count==posts.length-5){
+                notify(" page is loaded ")
+            }
+            // console.log(count)
+        },50)
+        // console.log("post creation end")
+    } else {
+        // console.log(" array has 0 items so page wont create.")
+        notify(" NO student found ");
+    }
 }
 
 // range will be handled by this only 
@@ -114,11 +146,11 @@ let rangeHandler = async function(indexArray,min,max,type,district,school){
             posts.push(index);            
         }
     }
-    console.log("newe arr is ",posts);
+    // console.log("newe arr is ",posts);
     let first_post="";
-    console.log(first_post,type==1,type==2,type==3)
+    // console.log(first_post,type==1,type==2,type==3)
     if(type==1){
-        console.log(" first post type is ", type)
+        // console.log(" first post type is ", type)
         first_post = `<div class="feature">
                     <p>Total students</p>
                     <h1>${posts.length}</h1>
@@ -129,7 +161,7 @@ let rangeHandler = async function(indexArray,min,max,type,district,school){
                     </div>`;
         document.querySelector(".features").innerHTML = first_post;
     }else if(type ==2){
-        console.log(" first post type is ", type)
+        // console.log(" first post type is ", type)
         let first_post = `<div class="feature">
                     <h3>Total students</h3>
                     <h1>${posts.length}</h1>
@@ -138,7 +170,7 @@ let rangeHandler = async function(indexArray,min,max,type,district,school){
                     </div>`;
         document.querySelector(".features").innerHTML = first_post;
     }else if(type==3){
-        console.log(" first post type is ", type)
+        // console.log(" first post type is ", type)
         let first_post = `<div class="feature">
                     <h3>Total students</h3>
                     <h1>${posts.length}</h1>
@@ -150,7 +182,7 @@ let rangeHandler = async function(indexArray,min,max,type,district,school){
     createPage(posts);
 }
 
-
+//******************  CONTROLLER OF THIS DASHBOARD *********** */
 // this is event listner and also validate wrong inputs here
 document.getElementById("get-result").addEventListener('click',function(){
     clearInterval(current_id);
@@ -159,11 +191,11 @@ document.getElementById("get-result").addEventListener('click',function(){
     let school = inputSchool.value;
     let district = inputDistrict.value;
 // cases1 range is 0 to 100;
-    if(!isNaN(minRange) && minRange<=36 && !isNaN(maxRange) && maxRange===100 && district){
+    if(!isNaN(minRange) && minRange<=59 && !isNaN(maxRange) && maxRange===100 && district){
         //subcase1: if schooland district is selected
         if(school && district){
             if(cache[district] && cache[district][school]){
-                console.log("schooland district is selected")
+                // console.log("schooland district is selected")
                 // creating total count set
                 let posts = cache[district][school]
                 let first_post = `<div class="feature">
@@ -176,11 +208,14 @@ document.getElementById("get-result").addEventListener('click',function(){
                     </div>`;
                 document.querySelector(".features").innerHTML = first_post;
                 createPage(posts);
-            }else console.log("school or district is wrong")
+            }else{
+                // console.log("school or district is wrong");
+                notify(" school or district is wrong. CALL 8477001129")
+            }
         //subcase2: if only district is selected
         }else if(district){
             if(cache["district"][district]){
-                console.log("only district is selected");
+                // console.log("only district is selected");
                 let posts = cache["district"][district];
                 let first_post = `<div class="feature">
                     <h3>Total students</h3>
@@ -190,40 +225,52 @@ document.getElementById("get-result").addEventListener('click',function(){
                     </div>`;
                 document.querySelector(".features").innerHTML = first_post;
                 createPage(posts);
-            }else console.log("wrong district")
+            }else{
+                // console.log("wrong district")
+                notify(" district is wrong. CALL 8477001129")
+            }
         //subcase3: if nothing is selected
-        }else console.log("district is not selected")
+        }
     }
 // case2: if range is variable;
     else if( minRange && maxRange){
         if(minRange>maxRange){
-            console.log("min range is higher then max range");
+            // console.log("min range is higher then max range");
             minRange = maxRange;
         }
-        console.log("if range is variable")
+        // console.log("if range is variable")
         // subcase1: range/dist/school all are given
         if(school && district){
             if(cache[district] && cache[district][school]){
-                console.log("school /district/range is selected")
+                // console.log("school /district/range is selected")
                 // creating total count set
                 rangeHandler(cache[district][school],minRange,maxRange,1,district,school);
-            }else console.log("school or district is wrong")
+            }else{
+                // console.log("school or district is wrong");
+                notify(" school or district is wrong. CALL 8477001129")
+            }
         //subcase2: if range and district is selected
         }else if(district){
             if(cache["district"][district]){
-                console.log("range and district is selected");
+                // console.log("range and district is selected");
                 rangeHandler(cache["district"][district],minRange,maxRange,2,district);
-            }else console.log("wrong district")
+            }else{
+                // console.log("wrong district")
+                notify(" district is wrong. CALL 8477001129")
+            }
         //subcase3: if nothing is selected
         }else{
-            console.log("range is given")
+            // console.log("range is given")
             rangeHandler(cache["sorted"],minRange,maxRange,3);
         }    
     }
     else{
-        console.log("some technical issue is occured")
+        // console.log("some technical issue is occured")
+        notify("Change range a little")
     }
 })
+
+
 
 
 
