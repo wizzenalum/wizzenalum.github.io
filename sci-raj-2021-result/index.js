@@ -15,7 +15,6 @@ import { cache } from "./data/cache.js"
         "district-code" -->{district-code:district_name}
         "school-code" --> {district-code:{school-code:school_name}}
 */
-
 let count = 0;
 // variable used to create single page on the view
 let current_id = "";
@@ -26,6 +25,31 @@ let inputSchool = document.getElementById("select-school");
 let inputMin = document.getElementById("min-range");
 let inputMax = document.getElementById("max-range");
 
+
+// ******************INITIALIZATION**************
+window.addEventListener('load', (event) => {
+    console.log('page is fully loaded');
+    let roll_no = 1500000;
+    let school = 0;
+    let percent = 0;
+    for(let index in db){
+        let deli1 = db[index].indexOf(" ");
+        let deli2 = db[index].indexOf(" ",deli1+1);
+        roll_no = roll_no + parseInt(db[index].substring(5,deli1));
+        if(parseInt(db[index].substring(1+deli1,deli2))!=0) school = parseInt(db[index].substring(1+deli1,deli2))+1000000;  
+        percent = parseInt(db[index].substring(0,3))
+        if(percent!=100) percent/=10;
+        db[index] = [
+            percent,
+            db[index].substring(deli2+1),
+            roll_no,
+            parseInt(db[index].substring(3,5))+90,
+            school,
+                    ]
+    }
+    console.log(db[0]);
+    
+  });
 // adding option to the select-district and select-school;
 console.log(db[0],cache["district-code"]);
 
