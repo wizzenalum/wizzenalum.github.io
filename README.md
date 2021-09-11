@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang = "en">
 <head>
@@ -11,7 +10,7 @@
   
   <p>
   <nav>
-    <a href="https://wizzenalum1.github.io/" target="_blank">link to website </a><br>
+    <a href="https://wizzenalum.github.io/" target="_blank">link to website </a><br>
  
     
   </nav>
