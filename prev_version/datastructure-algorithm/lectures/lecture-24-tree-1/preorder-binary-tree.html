@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecture 24 : binary Trees 1</title>
+    <link rel="stylesheet" href="lecture-24.css" type="text/css">
+</head>
+<body>
+    <header>
+        <h1>Lecture 24: Binary Trees 1</h1>
+    </header>
+    <main>
+        <nav>
+            <header>
+                <div class="head-card">
+                    <div class="icon"></div>
+                    <div class="heading">Question Tree</div>
+                </div>
+            </header>
+            <div class = nav-head>
+                <div><a href="sum-of-nodes.html"> <div>Sum Of Nodes</div></a></div>
+                <div><a href="preorder-binary-tree.html"> <div>Preorder Binary Tree</div></a></div>
+                <div><a href="postorder-binary-tree.html"> <div>Postorder Binary Tree</div></a></div>
+                <div><a href="nodes-greater-than-x.html"> <div>Nodes Greater Than X</div></a></div>
+                <div><a href="height-of-tree.html"> <div>Height Of Tree</div></a></div>
+                <div><a href="replace-node-with-depth.html"> <div>Replace Node With Depth</div></a></div>
+                <div><a href="is-node-present.html"> <div>Is Node Present</div></a></div>
+                <div><a href="nodes-without-sibling.html"> <div>Nodes without sibling</div></a></div>
+            </div>
+        </nav>
+        <div class = "code">
+            <pre>
+                public class Solution {
+
+                    public static void preOrder(BinaryTreeNode&lt;Integer&gt; root) {
+                        if(root==null) return;
+                        System.out.print(root.data.intValue()+" ");
+                        preOrder(root.left);
+                        preOrder(root.right);
+                    }
+                
+                }
+            </pre>
+
+        </div>
+    </main>
+    
+</body>
+</html>

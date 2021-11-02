@@ -1,0 +1,98 @@
+#container-1-playlist{
+    width: 100%;
+    height: 25vw;
+    /* background-color: red; */
+}
+#playlist-cover-image{
+    height:100%;
+    width:40%;
+    background: border-box center/cover no-repeat url(../images/artist-8-h.jpg);
+}
+#playlist-cover-detail{
+    box-sizing: border-box;
+    width:60%;
+    padding:2%;
+    /* background-color: green; */
+}
+#playlist-cover-detail>div:first-child{
+    justify-content: space-between;
+    align-items: center;
+}
+#playlist-cover-detail>*:nth-child(3){
+    margin-top:3%;
+}
+
+#play-follow{
+    margin:8% 15%;
+    justify-content: space-between;
+    align-items: center;
+}
+#play-button{
+    width:40%;
+    height:30px;
+    background:var(--play-button);
+    text-align: center;
+    padding-top:10px;
+}
+#play-button:active{
+    opacity: .7;
+}
+
+
+
+#container-2-playlist #queue-song-container>div{
+    background-color: rgba(55, 55, 71, 0.568);
+    padding:0px 30px;
+    text-align: center;
+    margin:0px 0px 10px 0px;
+    box-sizing: border-box;
+    width:100%;
+}
+#queue-song-container #queue-count,#add-to-playlist,#image-container,.name-writer,#add-to-fab{
+    width:10%;
+    margin: 0px;
+    /* background-color: black; */
+}
+#queue-song-container .time-status-player{
+    width:50%;
+    /* background-color: black; */
+}
+
+#add-to-playlist:active #vertical-bar,
+#add-to-playlist:active #horizontal-bar{
+    background-color: blue;
+}
+#add-to-playlist>div{
+    position: relative;
+    background-color: gray;
+}
+#vertical-bar{
+    height: 20px;
+    width:2px;
+    left:50%;
+
+}
+#horizontal-bar{
+    height: 2px;
+    width:20px;
+    bottom:11px;
+    left:38%;
+}
+#latest-release-container>div{
+    width:100%;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+#playlist-aside-container-1 .image-container{
+    box-sizing: border-box;
+    height: 80px;
+    width:30%;
+    margin:1%;
+    background-image:url("../images/play-button.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+#queue-popup-container{
+    position: relative;
+    bottom:30px;
+}

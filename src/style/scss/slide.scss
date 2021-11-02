@@ -1,0 +1,227 @@
+$skill-progress-background: rgb(36, 36, 43);
+
+// instruction styliing
+
+#instruction {
+  .toc-container {
+    aspect-ratio: 1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    text-transform: capitalize;
+
+    & > div {
+      display: grid;
+      place-items: center center;
+    }
+    & .leafs {
+      display: grid;
+      place-items: center center;
+      width: 0%;
+      opacity: 1;
+      padding: 10px;
+      transition: width 2s, opacity 3s;
+      transition-timing-function: ease-in-out;
+      user-select: none;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      background-color: rgb(119, 53, 53);
+      &:hover {
+        text-decoration: underline;
+        color: rgba(155, 155, 255, 0.753);
+      }
+      &:active {
+        border: none;
+      }
+    }
+  }
+}
+
+// style for introduction
+
+#intro {
+  display: grid;
+  gap: 20px;
+  place-items: center;
+  font-size: 1.5em;
+  p {
+    text-align: justify;
+  }
+  position: relative;
+  img {
+    position: absolute;
+    width: 100px;
+    aspect-ratio: 0.9;
+    border-radius: 50%;
+    top: 0;
+    transform: translateY(-100%);
+    left: calc(50% - 100px);
+    animation: goaway 5s linear 2s 1;
+    box-shadow: 0 0 2px 2px blueviolet;
+  }
+}
+@keyframes goaway {
+  from {
+    left: calc(50% - 100px);
+    transform: translateY(-100%) rotate(0deg);
+  }
+  25% {
+    left: 80%;
+  }
+  75% {
+    left: 0%;
+  }
+  to {
+    left: calc(50% - 100px);
+    transform: translateY(-100%) rotate((720deg));
+  }
+}
+
+#education {
+  display: grid;
+  place-items: center center;
+  gap: 20px;
+  height: 80%;
+  overflow-y: scroll;
+  text-align: justify;
+  padding: 20px;
+  text-shadow: 0 0 2px rgba(255, 255, 255, 0.548);
+
+  #exp-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(35vw, 1fr));
+    gap: 20px;
+    color: #000000;
+    .text1 > h3 {
+      font-size: 1.6rem;
+      color: rgb(14, 14, 89);
+    }
+    .text1 > h3 + p {
+      color: #a42858;
+      font-weight: 700;
+    }
+    .text1 > :nth-child(3) {
+      color: rgba(0, 0, 0, 0.577);
+      font-family: monospace;
+    }
+  }
+}
+
+// skill styling
+#skill {
+  display: grid;
+  place-items: center center;
+  .skill-content {
+    padding: 50px 0px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-content: centre;
+  }
+  .skill-content > div {
+    overflow: hidden;
+    box-sizing: border-box;
+    border-radius: 20px;
+    margin: 2vh 3vw;
+    width: 200px;
+    height: 35px;
+    background-color: $skill-progress-background;
+    .progress {
+      height: 100%;
+      border-radius: 17px 0px 0px 17px;
+      transition: all;
+      transition-duration: 1s;
+      transition-timing-function: ease-in-out;
+      width: 0%;
+      display: grid;
+      place-items: center center;
+    }
+    p {
+      text-transform: capitalize;
+      color: rgb(28, 206, 197);
+      font-size: 1.2rem;
+      margin-left: 20px;
+    }
+  }
+}
+
+// contacts
+
+#contact {
+  display: grid;
+  place-items: center center;
+  gap: 40px;
+  width: 100%;
+  margin: 10vh 0;
+  height: 80vh;
+  overflow-y: auto;
+  #contact-header {
+    color: rgb(51, 50, 50);
+  }
+
+  #contact-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    margin: auto;
+    gap: 40px;
+    width: 80%;
+    /* background-color: red; */
+    #form,
+    #info {
+      display: grid;
+      gap: 40px;
+      place-items: center center;
+    }
+    #form {
+      & > input,
+      textarea {
+        background-color: transparent;
+        color: rgb(197, 197, 197);
+        font-size: 1.2rem;
+        border-width: 0px 0px 2px 0px;
+        border-color: rgba(255, 255, 255, 0.664);
+        width: 100%;
+      }
+      #submit {
+        padding: 5px 40px;
+        text-transform: uppercase;
+        background-color: blue;
+        border-radius: 5px;
+        justify-self: center;
+        color: rgb(219, 217, 217);
+        font-size: 1.2rem;
+        border: none;
+        box-shadow: 0 0 70px 2px blue;
+        &:hover {
+          box-shadow: 0 0 40px 2px blue;
+        }
+        &:active {
+          box-shadow: 0 0 70px 2px blue;
+        }
+      }
+    }
+  }
+
+  #info {
+    h3 {
+      margin: 20px 0px;
+      font-size: 1.5rem;
+    }
+    #address {
+      .address-icon {
+        width: 2rem;
+        height: 2rem;
+      }
+      display: grid;
+      gap: 10px;
+      & > div {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        align-items: center;
+        gap: 10px;
+      }
+    }
+  }
+}
