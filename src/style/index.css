@@ -41,4 +41,11 @@ html body #root {
   width: 100%;
 }
 
+@media (orientation: portrait) {
+  .forward-btn,
+.backward-btn {
+    bottom: 5%;
+  }
+}
+
 /*# sourceMappingURL=index.css.map */

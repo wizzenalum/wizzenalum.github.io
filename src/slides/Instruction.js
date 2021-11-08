@@ -19,13 +19,13 @@ export default class Instruction extends Component {
     const { width, opacity } = this.state;
     return (
       <div id="instruction" className="slide">
-        <audio controls autoPlay={true} muted={mute} style={{ opacity: "0" }}>
+        {/* <audio controls autoPlay={true} muted={mute} style={{ opacity: "0" }}>
           <source src={vatan} type="audio/mpeg"></source>
           <p>
             Your browser doesn't support HTML5 audio. Here is a{" "}
             <a href="myAudio.mp3">link to the audio</a> instead.
           </p>
-        </audio>
+        </audio> */}
         <div className="toc-container">
           <div></div>
           <div>

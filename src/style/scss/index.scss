@@ -43,3 +43,9 @@ html {
     }
   }
 }
+@media (orientation: portrait) {
+  .forward-btn,
+  .backward-btn {
+    bottom: 5%;
+  }
+}

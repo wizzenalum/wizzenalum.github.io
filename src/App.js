@@ -11,6 +11,7 @@ import {
 } from "./slides";
 import volume from "./assets/volume.png";
 import React, { Component } from "react";
+import vatan from "./assets/vatan.mp3";
 
 class App extends Component {
   constructor(props) {
@@ -23,6 +24,8 @@ class App extends Component {
       mute: false,
       audio: null,
       btnColor: ["red", "blue", "pink", "purple"],
+      loadedEvents: [],
+      auto: true,
     };
   }
   componentDidUpdate(prevState) {
@@ -30,12 +33,19 @@ class App extends Component {
     }
   }
   handleButton = (button, slideNumber) => {
+    if (
+      button !== "auto" ||
+      this.state.currentSlide + 2 > this.state.slides.length
+    ) {
+      clearInterval(this.state.loadedEvents[0]);
+    }
+    if (button === "auto") button = "next";
+
     if (button === "start") this.setState({ currentSlide: 0 });
     else {
       const colors = ["red", "blue", "green", "orange", "pink", "purple"];
       let len = colors.length;
       const rando = () => colors[Math.floor(Math.random() * len)];
-
       this.setState((prev) => {
         let prevSlide = prev.currentSlide;
         let totalSlide = prev.slides.length;
@@ -65,6 +75,27 @@ class App extends Component {
     });
   };
 
+  componentDidMount() {
+    const id = setInterval(() => {
+      this.handleButton("auto");
+    }, 15000);
+    this.setState((prev) => {
+      return { loadedEvents: [...prev.loadedEvents, id] };
+    });
+    document.addEventListener("wheel", (event) => {
+      // console.log(event);
+
+      if (event.timeStamp - this.state.wheelTimeStamp > 1000) {
+        if (event.deltaY < 0) {
+          console.log("back", event.deltaY, event.timeStamp);
+        } else {
+          console.log("next", event.deltaY, event.timeStamp);
+        }
+        this.setState({ wheelTimeStamp: event.timeStamp });
+      }
+    });
+  }
+
   render() {
     const { currentSlide, slides, mute, btnColor } = this.state;
     const CurrentSlide = slides[currentSlide];
@@ -74,6 +105,14 @@ class App extends Component {
         <div className="App">
           {/* top curve of the page */}
           <div className="top-curve curve">
+            <audio
+              controls
+              autoPlay={true}
+              muted={mute}
+              style={{ opacity: "0" }}
+            >
+              <source src={vatan} type="audio/mpeg"></source>
+            </audio>
             <svg
               data-name="Layer 1"
               xmlns="http://www.w3.org/2000/svg"
